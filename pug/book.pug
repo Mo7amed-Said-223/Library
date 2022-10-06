@@ -1,0 +1,82 @@
+mixin inputMixin(type,name,text,place="")
+  .input
+    label(for=name) #{text} *
+    input(type=type,name=name,id = name,placeholder=place)
+doctype
+html(lang='en')
+  head
+    include ./linksHeader.pug
+    link(rel="stylesheet", href="../CSS/book.css")
+    title BOOK Dashboard
+  body
+    include ./frame.pug
+    .main 
+      .topbar 
+        p Books
+        a(href="/PHP/logout.php")
+          button logout
+      .books
+        .search
+          i.icon-search 
+          input(type="text" placeholder="Search...")
+        .buttons
+          button 
+            i.icon-plus 
+            |New Book
+          br
+        .table
+          .tr
+            .th ID
+            .th Title
+            .th Author Name
+            .th Categories
+            .th price
+            .th pages
+            .th Submission Date
+            .th Edidtion Date
+            .th Image
+            .th Action
+          .tr
+            .td 1
+            .td OOP
+            .td Mark
+            .td Programming
+            .td 100$
+            .td 659
+            .td 10-5-2022
+            .td 18-8-2022
+            .td 
+              img(src="../image/img.jpeg", alt="")
+            .td 
+              i.icon-pencil-square
+              i.icon-trash
+
+        .moveing 
+          span.numbers 
+          div 
+      .addbook
+        form(action="/PHP/book/insert.php",method="post",enctype="multipart/form-data")
+          .form
+            .bookDetails 
+              h3 Book Details 
+              .input
+                label(for="photo")  Photo *
+                input(type="file",name="bookPhoto",id="photo",accept="image/*",onchange="loadFile(event)")
+                img(src="")
+              +inputMixin("text","title","Title","Title book...")
+              +inputMixin("text","author","Author Name","Author Name...")
+              +inputMixin("text","price","Price","Price...")
+              +inputMixin("text","noPages","Pages","Pages...")
+              .input
+                label(for="categorie")  categorie *
+                select(name="id_category",id="id_category")
+                    option(value="-") Select 
+              .input
+                label(for="bookFile") Book File *
+                input(type="file",name="bookFile",id="bookFile")
+              input(type="text", name="idBook",id="idBook", hidden)
+            .footer
+              div
+                input(type="submit",id="save", value="Submit")
+              button Back
+    script(src="../JS/book.js") 

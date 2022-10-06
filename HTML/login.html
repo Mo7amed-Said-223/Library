@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/frame.css">
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link class="theme-file" rel="stylesheet" href="../CSS/colorLight.css">
+    <link rel="stylesheet" href="../icon/style.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <title>login</title>
+</head>
+
+<body>
+    <div class="card">
+        <h1> <i class="icon-books"></i>Library</h1>
+        <form class="login" action="/PHP/login/select.php" method="post">
+            <div class="input"><label for="gmail">Email</label><input type="email" id="gmail" name="gmail"
+                    placeholder="Enter Your Email..." /></div>
+            <div class="input"><label for="password">Password</label><input type="password" id="password"
+                    name="password" placeholder="Enter Your Password" /></div>
+            <div class="input"><input type="submit" value="Login"></div>
+            <h3>Not a member yet?<span>sign-in</span></h3>
+        </form>
+        <form class="signin" action="/PHP/login/insert.php" method="post" enctype="multipart/form-data">
+            <div class="input"><label for="userName">User Name</label><input type="text" id="userName" name="userName"
+                    placeholder="Enter Your Name..." /></div>
+            <div class="input"><label for="gmail">Email</label><input type="email" id="gmail" name="gmail"
+                    placeholder="Enter Your Email..." /></div>
+            <div class="input"><label for="password">Password</label><input type="password" id="password"
+                    name="password" placeholder="Enter Your Password" /></div>
+            <div class="input"><label for="passwordConfirm">Password Confirm</label><input type="password"
+                    id="passwordConfirm" name="passwordConfirm" placeholder="Enter Your Password" /></div>
+            <div class="input"><label for="photo">Image</label><input type="file" id="photo" name="photo" /></div>
+            <div class="input"><input type="submit" value="Create Account"></div>
+            <h3>Already Registered.<span>Login</span></h3>
+        </form>
+    </div>
+    <script src="../JS/log_sign.js"> </script>
+</body>
+
+</html>

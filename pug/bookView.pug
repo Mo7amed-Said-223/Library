@@ -1,0 +1,44 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel="icon", type="image/x-icon", href="../image/logo.png")
+    link(rel="stylesheet",class="theme-file", href="../CSS/colorLight.css")
+    link(rel="stylesheet", href="../icon/style.css")
+    link(rel="stylesheet", href="../CSS/bookView.css")
+    title Info Book
+  body
+    header 
+      span INFO 
+      span Comments
+    .info
+      .img 
+        img(src="../image/back.jfif")
+      .contant  
+        h1 Title 
+          p.title title1
+        h2 categorie
+          p.cate cate1
+        h3 Author 
+        p.author author1
+        h3 Pages 
+        p.page 123
+        h3 Price 
+        p.price 123
+        a(href="#",download)
+          button Download Book 
+    .comments 
+      .input
+        label Enter Your Comment
+        br
+        textarea(name="comment", cols="30", rows="10")
+        button add Comment
+      .view
+        .comment
+          .user
+            img(src="../image/img.jpeg")
+            h5.username Mohamed Said 
+              p.date 10-10-2022
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas harum molestiae, architecto ea a sequi, quaerat totam quo molestias consectetur tempora mollitia nobis dolorem animi dicta perferendis corporis adipisci beatae?
+    script(src="../JS/view.js") 
+

@@ -1,0 +1,219 @@
+.card, .header, .book, .admins {
+  background-color: var(--colorWhite);
+  border-radius: 20px;
+  padding: 3%;
+  width: 100%;
+  margin: 1% 0;
+}
+
+nav li:nth-child(1) a {
+  background-color: var(--colorBack);
+  color: var(--colorPurple);
+}
+
+nav li:nth-child(1) a::before, nav li:nth-child(1) a::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: transparent;
+  right: 0;
+  border-radius: 50%;
+}
+
+nav li:nth-child(1) a::before {
+  top: -50px;
+  -webkit-box-shadow: 35px 35px 0 10px var(--colorBack);
+          box-shadow: 35px 35px 0 10px var(--colorBack);
+}
+
+nav li:nth-child(1) a::after {
+  bottom: -50px;
+  -webkit-box-shadow: 35px -35px 0 10px var(--colorBack);
+          box-shadow: 35px -35px 0 10px var(--colorBack);
+}
+
+.header {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.header div {
+  display: inline-block;
+  width: 25%;
+}
+
+.header div i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: var(--colorWhite);
+  font-size: 2.5rem;
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.header div i::before {
+  margin: auto;
+}
+
+.header div .data {
+  width: 50%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.header div .data .name {
+  color: var(--color3);
+  font-size: 25px;
+  display: block;
+}
+
+.header div .data .number {
+  color: var(--colorText);
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.body {
+  width: 100%;
+}
+
+.book {
+  width: 50%;
+  margin-right: 5%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.book h3 {
+  color: var(--colorText);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.book .b {
+  width: 100%;
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book .b img {
+  width: 100px;
+  height: 80px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.book .b h4 {
+  color: var(--colorText);
+  font-size: 21px;
+  margin: 5px 0;
+}
+
+.book .b p {
+  color: var(--color3);
+  font-size: 18px;
+}
+
+.j {
+  color: #000;
+}
+
+.admins {
+  width: 45%;
+  vertical-align: top;
+  display: inline-block;
+  width: 40%;
+}
+
+.admins .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.admins .add h3 {
+  color: var(--colorText);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.admins .add p {
+  color: var(--color3);
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.admins .add p span {
+  font-weight: bold;
+  color: var(--colorText);
+}
+
+.admins .admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.admins .admin img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.admins .admin h4 {
+  color: var(--colorText);
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.admins .admin i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: 2px solid var(--color3);
+  color: var(--color3);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.admins .admin i::before {
+  margin: auto;
+  font-weight: bolder;
+}
+
+.admins .admin i:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+  border-color: var(--colorPurple);
+}
+/*# sourceMappingURL=dashboard.css.map */

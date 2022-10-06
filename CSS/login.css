@@ -1,0 +1,76 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(48, 57, 115, 0.5)), to(rgba(48, 57, 115, 0.5))), url(../image/back.jfif);
+  background: linear-gradient(0deg, rgba(48, 57, 115, 0.5), rgba(48, 57, 115, 0.5)), url(../image/back.jfif);
+  background-size: cover;
+}
+
+.signin {
+  display: none;
+}
+
+.card {
+  width: 40%;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card h1 i {
+  background-color: var(--colorOrange);
+  padding: 5px 10px;
+  color: var(--colorWhite);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.card .input {
+  margin: 20px 10px;
+}
+
+.card .input label {
+  color: var(--colorText);
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card .input input {
+  width: 100% !important;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--colorText);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid var(--color2);
+}
+
+.card .input input:focus-visible {
+  outline: none;
+}
+
+.card .input input[type='submit']:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.card h3 {
+  text-align: center;
+  color: var(--colorText);
+}
+
+.card h3 span {
+  margin: 0 5px;
+  color: var(--colorPurple);
+  cursor: pointer;
+}
+/*# sourceMappingURL=login.css.map */

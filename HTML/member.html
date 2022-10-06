@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/frame.css">
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link class="theme-file" rel="stylesheet" href="../CSS/colorLight.css">
+    <link rel="stylesheet" href="../icon/style.css">
+    <link rel="stylesheet" href="../CSS/member.css">
+    <title>Member Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <p> <span class="icon-books"></span><b>Library</b></p>
+        <ul>
+            <li><a href="./dashboard.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+            <li><a href="./book.html"><i class="icon-book"></i><span>Books</span></a></li>
+            <li><a href="./categorie.html"><i class="icon-list"></i><span>Categories</span></a></li>
+            <li><a href="./member.html"><i class="icon-group"></i><span>Members</span></a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="topbar">
+            <p>Members</p><a href="/PHP/logout.php"><button>logout</button></a>
+        </div>
+        <div class="members">
+            <div class="search"><i class="icon-search"> </i><input type="text" placeholder="Search..."></div>
+            <div class="buttons"><button> <i class="icon-plus"> </i>New Member</button><br></div>
+            <div class="table">
+                <div class="tr">
+                    <div class="th">ID</div>
+                    <div class="th">Name</div>
+                    <div class="th">Gmail</div>
+                    <div class="th">Image</div>
+                    <div class="th">Subscibe Date</div>
+                    <div class="th">Admin</div>
+                    <div class="th">Action</div>
+                </div>
+                <div class="tr">
+                    <div class="td">1</div>
+                    <div class="td">OOP</div>
+                    <div class="td">Mark</div>
+                    <div class="td"> <img src="../image/img.jpeg" alt=""></div>
+                    <div class="td">Programming</div>
+                    <div class="td">Programming</div>
+                    <div class="td"> <i class="icon-pencil-square"></i><i class="icon-trash"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="addmember">
+            <form action="/PHP/member/insert.php" method="post" enctype="multipart/form-data">
+                <div class="form">
+                    <div class="memberDetails">
+                        <h3>Member Details </h3>
+                        <div class="input"><label for="photo"> Photo *</label><input type="file" name="photo" id="photo"
+                                accept="image/*" onchange="loadFile(event)"><img src=""></div>
+                        <div class="input"><label for="name">Name *</label><input type="text" id="name" name="name"
+                                placeholder="Name...." /></div>
+                        <div class="input"><label for="gmail">gmail *</label><input type="gmail" id="gmail" name="gmail"
+                                placeholder="gmail..." /></div>
+                        <div class="input"><label for="password">password *</label><input type="password" id="password"
+                                name="password" placeholder="password..." /></div>
+                        <div class="input"><label for="ConfirmPassword">Confirm password *</label><input type="password"
+                                id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm password..." /></div>
+                        <div class="input"><label for="admin"> admin *</label><select name="admin" id="admin">
+                                <option value="-">Select </option>
+                                <option value="0">No </option>
+                                <option value="1">Yes </option>
+                            </select></div><input type="text" name="idMember" id="idMember" hidden>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div><button id="save">Submit</button></div><button>Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../JS/member.js"> </script>
+</body>
+
+</html>

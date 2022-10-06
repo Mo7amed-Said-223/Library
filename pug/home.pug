@@ -1,0 +1,35 @@
+html(lang="en")
+    head
+    meta(charset='utf-8')
+    link(rel="icon", type="image/x-icon", href="../image/logo.png")
+    link(rel="stylesheet",class="theme-file", href="../CSS/colorLight.css")
+    link(rel="stylesheet", href="../CSS/home.css")
+    link(rel="stylesheet", href="../icon/style.css")
+    title Home Page
+    body 
+        header 
+            h1 
+                i.icon-books
+                | Library 
+            a(href="/PHP/logout.php")
+                button logout
+        .search 
+            input(type="text",placeholder="Search any books...")
+            select(name="categorie",value="Filter",class="categorie") 
+                option(value="ALL") ALL
+            button 
+                i.icon-search
+                | Search
+        .books 
+            .book 
+                img(src="../image/back.jfif")
+                h2.title Book1 
+                h4.categorie Programming
+                h5.author Mohamed Said 
+                button View More
+
+        .moveing 
+            span.numbers 
+            div 
+        script(src="../JS/home.js") 
+

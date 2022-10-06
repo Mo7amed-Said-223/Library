@@ -1,0 +1,48 @@
+doctype
+html(lang='en')
+  head
+    include ./linksHeader.pug
+    link(rel="stylesheet", href="../CSS/dashboard.css")
+    title Dashboard
+  body
+    include ./frame.pug
+    .main 
+      .topbar 
+        p Dashboard
+        a(href="/PHP/logout.php")
+          button logout
+      .header
+        div 
+            i(class="icon-book",style="background-color: var(--colorPurple)")
+            .data
+              span.name Books
+              span.number 123
+        div 
+            i(class="icon-list",style="background-color: var(--colorOrange)")
+            .data
+              span.name Categories 
+              span.number 123
+        div 
+            i(class="icon-group",style="background-color: var(--colorYellow)")
+            .data
+              span.name Members 
+              span.number 123
+      .body 
+        .book 
+          h3 Books
+          .b   
+            img(src="../image/img.jpeg", alt="alt")
+            .details
+              h4 Book1
+              p Lorem ipsum dolor sit amet consectetur... 
+        .admins 
+          .add 
+              h3 Admins
+              p   System have 
+                span 123 
+                | Admin
+          .result 
+            .admin 
+                img(src="../image/img.jpeg", alt="alt")
+                h4 Mohamed Said
+    script(src="../JS/dashboard.js")

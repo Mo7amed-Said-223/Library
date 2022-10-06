@@ -1,0 +1,52 @@
+@mixin button_style {
+
+  button {
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color4);
+    color: var(--colorText);
+    font-size: 15px;
+    font-weight: bold;
+    &:hover {
+      background-color: var(--colorPurple);
+      color: var(--colorWhite);
+    }
+  }
+}
+@mixin active($n) {
+  nav li:nth-child(#{$n}) a {
+    background-color: var(--colorBack);
+    color: var(--colorPurple);
+
+    &::before,
+    &::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: transparent;
+      right: 0;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: -50px;
+      box-shadow: 35px 35px 0 10px var(--colorBack);
+    }
+
+    &::after {
+      bottom: -50px;
+      box-shadow: 35px -35px 0 10px var(--colorBack);
+    }
+  }
+}
+
+.card{
+    background-color: var(--colorWhite);
+    border-radius: 20px;
+    padding: 3%;
+    width: 100%;
+    margin: 1% 0;
+}

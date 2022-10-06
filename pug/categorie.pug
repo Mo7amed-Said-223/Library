@@ -1,0 +1,41 @@
+doctype
+html(lang='en')
+  head
+    include ./linksHeader.pug
+    link(rel="stylesheet", href="../CSS/categories.css")
+    title Category Dashboard
+  body
+    include ./frame.pug
+    .main 
+      .topbar 
+        p Categories
+        a(href="/PHP/logout.php")
+          button logout
+      .Categories
+        .buttons
+          button 
+            i.icon-plus 
+            |New Categorie
+          br
+        .table
+          .tr
+            .th ID
+            .th Title
+            .th Total books
+            .th Action
+          .tr
+            .td 1
+            .td OOP
+            .td Mark
+            .td 
+              i.icon-pencil-square
+              i.icon-trash
+        .newCategorie
+          p ❌
+          .input
+            input(type="text" placeholder="Name Of Categorie...." )
+          .buttons
+            button 
+              i.icon-plus 
+              |Create
+    script(src="../JS/categorie.js") 

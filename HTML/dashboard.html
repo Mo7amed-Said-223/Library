@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/frame.css">
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link class="theme-file" rel="stylesheet" href="../CSS/colorLight.css">
+    <link rel="stylesheet" href="../icon/style.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <p> <span class="icon-books"></span><b>Library</b></p>
+        <ul>
+            <li><a href="./dashboard.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+            <li><a href="./book.html"><i class="icon-book"></i><span>Books</span></a></li>
+            <li><a href="./categorie.html"><i class="icon-list"></i><span>Categories</span></a></li>
+            <li><a href="./member.html"><i class="icon-group"></i><span>Members</span></a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="topbar">
+            <p>Dashboard</p><a href="/PHP/logout.php"><button>logout</button></a>
+        </div>
+        <div class="header">
+            <div> <i class="icon-book" style="background-color: var(--colorPurple)"></i>
+                <div class="data"><span class="name">Books</span><span class="number">123</span></div>
+            </div>
+            <div> <i class="icon-list" style="background-color: var(--colorOrange)"></i>
+                <div class="data"><span class="name">Categories </span><span class="number">123</span></div>
+            </div>
+            <div> <i class="icon-group" style="background-color: var(--colorYellow)"></i>
+                <div class="data"><span class="name">Members </span><span class="number">123</span></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="book">
+                <h3>Books</h3>
+                <div class="b"> <img src="../image/img.jpeg" alt="alt">
+                    <div class="details">
+                        <h4>Book1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur... </p>
+                    </div>
+                </div>
+            </div>
+            <div class="admins">
+                <div class="add">
+                    <h3>Admins</h3>
+                    <p> System have <span>123 </span>Admin</p>
+                </div>
+                <div class="result">
+                    <div class="admin"> <img src="../image/img.jpeg" alt="alt">
+                        <h4>Mohamed Said</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/dashboard.js"></script>
+</body>
+
+</html>

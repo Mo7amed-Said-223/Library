@@ -1,0 +1,14 @@
+:root {
+  --colorPurple: #4d44b5;
+  --colorOrange: rgb(251, 125, 91);
+  --colorYellow: rgb(252, 196, 62);
+  --colorText: rgb(48, 57, 115);
+  --colorGreen: #4cbc9a;
+  --colorRed: #ff4550;
+  --colorBack: #f3f4ff;
+  --colorWhite: #ffffff;
+  --color1: #f5f5f5;
+  --color2: #c1bbeb;
+  --color3: #a098ae;
+  --color4: #e3e3f8;
+}

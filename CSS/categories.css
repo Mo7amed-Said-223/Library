@@ -1,0 +1,158 @@
+.card, .Categories .table, .Categories .newCategorie {
+  background-color: var(--colorWhite);
+  border-radius: 20px;
+  padding: 3%;
+  width: 100%;
+  margin: 1% 0;
+}
+
+nav li:nth-child(3) a {
+  background-color: var(--colorBack);
+  color: var(--colorPurple);
+}
+
+nav li:nth-child(3) a::before, nav li:nth-child(3) a::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: transparent;
+  right: 0;
+  border-radius: 50%;
+}
+
+nav li:nth-child(3) a::before {
+  top: -50px;
+  -webkit-box-shadow: 35px 35px 0 10px var(--colorBack);
+          box-shadow: 35px 35px 0 10px var(--colorBack);
+}
+
+nav li:nth-child(3) a::after {
+  bottom: -50px;
+  -webkit-box-shadow: 35px -35px 0 10px var(--colorBack);
+          box-shadow: 35px -35px 0 10px var(--colorBack);
+}
+
+.Categories {
+  width: 100%;
+}
+
+.Categories .search, .Categories .newCategorie .input {
+  display: inline-block;
+  background-color: var(--colorWhite);
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  vertical-align: middle;
+}
+
+.Categories .search i, .Categories .newCategorie .input i {
+  font-size: 20px;
+  color: var(--colorPurple);
+  padding-right: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.Categories .search input, .Categories .newCategorie .input input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: var(--color3);
+}
+
+.Categories .search input:focus-visible, .Categories .newCategorie .input input:focus-visible {
+  outline: none;
+}
+
+.Categories .buttons {
+  text-align: end;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.Categories .buttons button {
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  border: 2px solid var(--colorPurple);
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 10px 5px;
+  margin: 0 10px;
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.Categories .buttons button:hover {
+  background-color: var(--colorWhite);
+  color: var(--colorPurple);
+}
+
+.Categories .table .th {
+  color: var(--colorText) !important;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.Categories .table .td,
+.Categories .table .th {
+  text-align: left;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+}
+
+.Categories .table .tr {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color3);
+}
+
+.Categories .table .icon-pencil-square,
+.Categories .table .icon-trash {
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Categories .table .icon-pencil-square {
+  color: var(--colorGreen);
+}
+
+.Categories .table .icon-trash {
+  color: var(--colorRed);
+}
+
+.Categories .newCategorie {
+  display: none;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  border: 2px solid var(--colorPurple);
+}
+
+.Categories .newCategorie p {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.Categories .newCategorie .input {
+  border: 2px solid var(--colorPurple);
+  width: 60%;
+}
+
+.Categories .newCategorie .buttons {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+/*# sourceMappingURL=categories.css.map */

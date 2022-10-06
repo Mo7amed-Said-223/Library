@@ -1,0 +1,90 @@
+@import "./include";
+@include active(3);
+
+.Categories {
+    width: 100%;
+
+    .buttons {
+        text-align: end;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 30px;
+
+        button {
+            display: inline-block;
+            text-align: center;
+            width: 150px;
+            border: 2px solid var(--colorPurple);
+            border-radius: 20px;
+            font-size: 16px;
+            padding: 10px 5px;
+            margin: 0 10px;
+            background-color: var(--colorPurple);
+            color: var(--colorWhite);
+            &:hover {
+                background-color: var(--colorWhite);
+                color: var(--colorPurple);
+            }
+        }
+    }
+
+    .table {
+        @extend .card;
+
+        .th {
+            color: var(--colorText) !important;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        .td,
+        .th {
+            text-align: left;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20%;
+        }
+
+        .tr {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--color3);
+        }
+        .icon-pencil-square,
+        .icon-trash {
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .icon-pencil-square {
+            color: var(--colorGreen);
+        }
+        .icon-trash {
+            color: var(--colorRed);
+        }
+    }
+    .newCategorie {
+        @extend .card;
+        display: none;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        border: 2px solid var(--colorPurple);
+        p{
+            position: absolute;
+            top: 5%;
+            right: 3%;
+            cursor: pointer;
+        }
+        .input{
+            @extend .search;
+            border: 2px solid var(--colorPurple);
+            width: 60%;
+        }
+        .buttons{
+            margin: 0;
+            width: fit-content;
+        }
+    }
+}

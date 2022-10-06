@@ -1,0 +1,180 @@
+.card {
+  background-color: var(--colorWhite);
+  border-radius: 20px;
+  padding: 3%;
+  width: 100%;
+  margin: 1% 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, var(--colorPurple)), color-stop(30%, var(--colorBack)));
+  background: linear-gradient(to right, var(--colorPurple) 30%, var(--colorBack) 30%);
+}
+
+header {
+  text-align: right;
+  padding: 20px;
+}
+
+header span {
+  color: var(--colorText);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 50px;
+  cursor: pointer;
+}
+
+header span:hover {
+  color: var(--colorPurple);
+}
+
+.info .img {
+  height: 500px;
+  display: inline-block;
+  margin-left: 15%;
+  width: 30%;
+  background-color: aqua;
+}
+
+.info .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.info .contant {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.info .contant h1 {
+  color: var(--colorText);
+  margin: 20px 0;
+}
+
+.info .contant h2 {
+  color: var(--color2);
+  margin: 20px 0;
+}
+
+.info .contant h3 {
+  color: var(--colorText);
+  margin-top: 30px;
+}
+
+.info .contant p {
+  color: var(--color3);
+  margin: 0 50px;
+}
+
+.info .contant button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color4);
+  color: var(--colorText);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.info .contant button:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.info .contant button {
+  margin: 50px;
+  width: 20%;
+}
+
+.comments {
+  display: none;
+}
+
+.comments .input {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+}
+
+.comments .input label {
+  color: var(--colorWhite);
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.comments .input textarea {
+  display: block;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.comments .input button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color4);
+  color: var(--colorText);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.comments .input button:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.comments .input button {
+  width: 50%;
+}
+
+.comments .view {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  padding: 5% 0;
+}
+
+.comments .view .comment {
+  width: 30%;
+  padding: 10px;
+  border: 2px solid var(--colorPurple);
+  border-radius: 20px;
+  margin: 1%;
+  display: inline-block;
+}
+
+.comments .view .comment .user {
+  width: 100%;
+}
+
+.comments .view .comment .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.comments .view .comment .user h5 {
+  display: inline-block;
+  vertical-align: 50%;
+  font-size: 24px;
+  padding: 10px;
+  color: var(--colorText);
+}
+
+.comments .view .comment p {
+  font-size: 14px;
+  color: var(--color3);
+}
+/*# sourceMappingURL=bookView.css.map */

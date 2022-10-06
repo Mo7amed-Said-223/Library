@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/frame.css">
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link class="theme-file" rel="stylesheet" href="../CSS/colorLight.css">
+    <link rel="stylesheet" href="../icon/style.css">
+    <link rel="stylesheet" href="../CSS/book.css">
+    <title>BOOK Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <p> <span class="icon-books"></span><b>Library</b></p>
+        <ul>
+            <li><a href="./dashboard.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+            <li><a href="./book.html"><i class="icon-book"></i><span>Books</span></a></li>
+            <li><a href="./categorie.html"><i class="icon-list"></i><span>Categories</span></a></li>
+            <li><a href="./member.html"><i class="icon-group"></i><span>Members</span></a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="topbar">
+            <p>Books</p><a href="/PHP/logout.php"><button>logout</button></a>
+        </div>
+        <div class="books">
+            <div class="search"><i class="icon-search"> </i><input type="text" placeholder="Search..."></div>
+            <div class="buttons"><button> <i class="icon-plus"> </i>New Book</button><br></div>
+            <div class="table">
+                <div class="tr">
+                    <div class="th">ID</div>
+                    <div class="th">Title</div>
+                    <div class="th">Author Name</div>
+                    <div class="th">Categories</div>
+                    <div class="th">price</div>
+                    <div class="th">pages</div>
+                    <div class="th">Submission Date</div>
+                    <div class="th">Edidtion Date</div>
+                    <div class="th">Image</div>
+                    <div class="th">Action</div>
+                </div>
+                <div class="tr">
+                    <div class="td">1</div>
+                    <div class="td">OOP</div>
+                    <div class="td">Mark</div>
+                    <div class="td">Programming</div>
+                    <div class="td">100$</div>
+                    <div class="td">659</div>
+                    <div class="td">10-5-2022</div>
+                    <div class="td">18-8-2022</div>
+                    <div class="td"> <img src="../image/img.jpeg" alt=""></div>
+                    <div class="td"> <i class="icon-pencil-square"></i><i class="icon-trash"></i></div>
+                </div>
+            </div>
+            <div class="moveing"> <span class="numbers"> </span>
+                <div> </div>
+            </div>
+        </div>
+        <div class="addbook">
+            <form action="/PHP/book/insert.php" method="post" enctype="multipart/form-data">
+                <div class="form">
+                    <div class="bookDetails">
+                        <h3>Book Details </h3>
+                        <div class="input"><label for="photo"> Photo *</label><input type="file" name="bookPhoto"
+                                id="photo" accept="image/*" onchange="loadFile(event)"><img src=""></div>
+                        <div class="input"><label for="title">Title *</label><input type="text" name="title" id="title"
+                                placeholder="Title book..." /></div>
+                        <div class="input"><label for="author">Author Name *</label><input type="text" name="author"
+                                id="author" placeholder="Author Name..." /></div>
+                        <div class="input"><label for="price">Price *</label><input type="text" name="price" id="price"
+                                placeholder="Price..." /></div>
+                        <div class="input"><label for="noPages">Pages *</label><input type="text" name="noPages"
+                                id="noPages" placeholder="Pages..." /></div>
+                        <div class="input"><label for="categorie"> categorie *</label><select name="id_category"
+                                id="id_category">
+                                <option value="-">Select </option>
+                            </select></div>
+                        <div class="input"><label for="bookFile">Book File *</label><input type="file" name="bookFile"
+                                id="bookFile"></div><input type="text" name="idBook" id="idBook" hidden>
+                    </div>
+                    <div class="footer">
+                        <div><input type="submit" id="save" value="Submit"></div><button>Back</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../JS/book.js"> </script>
+</body>
+
+</html>

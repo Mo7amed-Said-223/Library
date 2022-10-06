@@ -1,0 +1,413 @@
+@import "./include";
+@include active(2);
+
+.books {
+    width: 100%;
+
+    .search {
+        display: inline-block;
+        background-color: var(--colorWhite);
+        padding: 10px 15px;
+        border-radius: 20px;
+        width: 40%;
+        height: max-content;
+        vertical-align: middle;
+        i {
+            font-size: 20px;
+            color: var(--colorPurple);
+            padding-right: 10px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            width: calc(100%-20px);
+            color: var(--color3);
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+
+    .buttons {
+        text-align: end;
+        display: inline-block;
+        width: 58%;
+        margin-bottom: 30px;
+
+        select {
+            display: inline-block;
+            text-align: center;
+            width: 150px;
+            border: 2px solid var(--colorPurple);
+            border-radius: 20px;
+            color: var(--colorPurple);
+            background-color: transparent;
+            font-size: 16px;
+            padding: 10px 5px;
+            margin: 0 10px;
+
+            option {
+                background-color: var(--colorBack);
+            }
+
+            &:hover {
+                color: var(--colorWhite);
+                background-color: var(--colorPurple);
+
+                option {
+                    color: var(--colorPurple);
+                }
+            }
+        }
+
+        button {
+            @extend select;
+            background-color: var(--colorPurple);
+            color: var(--colorWhite);
+
+            &:hover {
+                background-color: var(--colorWhite);
+                color: var(--colorPurple);
+            }
+        }
+    }
+    
+    .table {
+        width: 100%;
+        background-color: var(--colorWhite);
+        border-radius: 20px;
+        padding: 10px;
+        overflow-x: scroll;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .th {
+            color: var(--colorText) !important;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+        
+        .td,
+        .th {
+            text-align: left;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 150px;
+        }
+        
+        .tr {
+            padding: 10px 0;
+            display: inline-block;
+            border-bottom: 1px solid var(--color3);
+            width: max-content;
+        }
+        .icon-pencil-square,
+        .icon-share-square,
+        .icon-trash{
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .icon-pencil-square{
+            color: var(--colorGreen);
+        }
+        .icon-trash{
+            color: var(--colorRed);
+        }
+        .icon-share-square{
+            color: var(--colorPurple);
+        }
+    }
+
+    .moveing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+
+        .numbers {
+            color: var(--color3);
+            font-size: 12px;
+
+            b {
+                font-weight: bold;
+                color: var(--colorText);
+            }
+        }
+
+        div {
+            font-size: 20px;
+            color: var(--color3);
+            font-weight: bold;
+
+            * {
+                margin: 0 10px;
+                // vertical-align: ;
+            }
+
+            i:hover {
+                color: var(--colorPurple);
+            }
+
+            b {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid var(--color3);
+                border-radius: 50%;
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+
+                &:hover,
+                &.checked {
+                    border-color: var(--colorPurple);
+                    background-color: var(--colorPurple);
+                    color: var(--colorWhite);
+                }
+            }
+        }
+    }
+}
+
+.addbook {
+    width: 100%;
+    grid-column: 1/13;
+    display: none;
+
+    h3 {
+        grid-column: 1/6;
+        background-color: var(--colorPurple);
+        color: var(--colorWhite);
+        width: 104%;
+        margin: -2% 0 10px -2%;
+        border-radius: 20px 20px 0 0;
+        padding: 1% 2%;
+    }
+
+    .bookDetails .input{
+        margin: 5px;
+        display: inline-block;
+
+        label {
+            color: var(--colorText);
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100% !important;
+            padding: 10px;
+            background-color: transparent;
+            color: var(--colorText);
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid var(--color2);
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+
+    .bookDetails {
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 2%;
+        width: 100%;
+        background-color: var(--colorWhite);
+        border-radius: 20px;
+
+        img {
+            position: absolute;
+            width: 73%;
+            height: 150px;
+            top: 42%;
+            border-radius: 10px;
+            left: 0;
+            z-index: -1;
+        }
+
+        .input {
+            &:nth-child(2) {
+                grid-column: 1/2;
+                position: relative;
+
+                input {
+                    visibility: hidden;
+                }
+
+                label {
+                    position: relative;
+                }
+
+                label::before {
+                    content: "Drag and drop or click here to select file";
+                    position: absolute;
+                    padding: 5px;
+                    top: 30px;
+                    left: 0px;
+                    display: flex;
+                    align-items: center;
+                    width: 65%;
+                    height: 130px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: var(--color3);
+                    border: 2px dashed var(--color3);
+                    border-radius: 10px;
+                }
+            }
+
+            &:nth-child(3) {
+                grid-column: 2/4;
+            }
+
+            &:nth-child(4) {
+                grid-column: 4/6;
+            }
+
+            &:nth-child(5) {
+                grid-column: 2/3;
+            }
+            &:nth-child(6) {
+                grid-column: 3/4;
+            }
+            &:nth-child(7) {
+                grid-column: 4/6;
+                select {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+                    border: 2px solid var(--color2);
+                    border-radius: 5px;
+                    color: var(--colorText);
+                    background-color: transparent;
+                    font-size: 16px;
+                    padding: 10px 5px;
+                    margin: 0 10px;
+                    option {
+                        background-color: var(--colorBack);
+                    }
+
+                    &:hover {
+                        option {
+                            color: var(--colorPurple);
+                        }
+                    }
+                }
+            }
+            &:nth-child(8) {
+                grid-column: 2/4;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .save,
+        #save,
+        button {
+            padding: 10px;
+            border: 2px solid var(--colorPurple);
+            border-radius: 20px;
+            margin: 20px 10px;
+            background: transparent;
+            color: var(--colorPurple);
+            font-weight: bold;
+
+            &:hover {
+                background-color: var(--colorPurple);
+                color: var(--colorWhite);
+            }
+        }
+
+        button {
+            padding: 10px 30px;
+        }
+    }
+}
+
+.cardEdit{
+    z-index: 100;
+    position: absolute;
+    @extend .card;
+    width: 50%;
+    top: 10%;
+    left: 25%;
+    border: 2px solid var(--colorPurple);
+    h1{
+        text-align: center;
+        color: var(--colorText);
+    }
+.input{
+        margin: 5px;
+        display: inline-block;
+        width: 100%;
+
+        label {
+            color: var(--colorText);
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input{
+            width: 100% !important;
+            padding: 10px;
+            background-color: transparent;
+            color: var(--colorText);
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid var(--color2);
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+    select {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+                    border: 2px solid var(--color2);
+                    border-radius: 5px;
+                    color: var(--colorText);
+                    background-color: transparent;
+                    font-size: 16px;
+                    padding: 10px 5px;
+                    margin: 0 10px;
+                    option {
+                        background-color: var(--colorBack);
+                    }
+
+                    &:hover {
+                        option {
+                            color: var(--colorPurple);
+                        }
+                    }
+                }
+    @include button_style;
+    button{
+        width: 100%;
+    }
+}

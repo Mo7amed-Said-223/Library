@@ -1,0 +1,224 @@
+.card, .books {
+  background-color: var(--colorWhite);
+  border-radius: 20px;
+  padding: 3%;
+  width: 100%;
+  margin: 1% 0;
+}
+
+header {
+  background-color: var(--colorPurple);
+  text-align: center;
+  color: var(--colorWhite);
+  padding: 10px;
+  position: relative;
+}
+
+header i {
+  background-color: var(--colorOrange);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+
+header button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color4);
+  color: var(--colorText);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+header button:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+header button {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  right: 1%;
+}
+
+.search {
+  margin: 20px;
+  background-color: var(--colorWhite);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.search input {
+  width: 40%;
+  height: 40px;
+  background-color: var(--color1);
+  border: none;
+  border-radius: 20px;
+  margin-right: 100px;
+  padding: 20px;
+  color: var(--colorPurple);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search select {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  color: var(--colorText);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.search button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color4);
+  color: var(--colorText);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search button:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.search button {
+  width: 150px;
+}
+
+.books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.books .book {
+  border: 2px solid var(--colorPurple);
+  width: 22%;
+  border-radius: 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+}
+
+.books .book * {
+  margin: 10px 0;
+}
+
+.books .book img {
+  width: 90%;
+  height: 200px;
+}
+
+.books .book h2 {
+  color: var(--colorText);
+}
+
+.books .book h4 {
+  color: var(--color3);
+}
+
+.books .book h5 {
+  display: inline-block;
+  margin-right: 20px;
+  color: var(--color2);
+  font-weight: bold;
+}
+
+.books .book button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color4);
+  color: var(--colorText);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.books .book button:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.books .book button {
+  width: 150px;
+}
+
+.moveing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.moveing .numbers {
+  color: var(--color3);
+  font-size: 20px;
+}
+
+.moveing .numbers b {
+  font-weight: bold;
+  color: var(--colorText);
+}
+
+.moveing div {
+  font-size: 20px;
+  color: var(--color3);
+  font-weight: bold;
+}
+
+.moveing div * {
+  margin: 0 10px;
+}
+
+.moveing div i:hover {
+  color: var(--colorPurple);
+}
+
+.moveing div b {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid var(--color3);
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.moveing div b:hover, .moveing div b.checked {
+  border-color: var(--colorPurple);
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+/*# sourceMappingURL=home.css.map */

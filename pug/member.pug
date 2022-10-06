@@ -1,0 +1,72 @@
+mixin inputMixin(type,id,text,place)
+  .input
+    label(for=id) #{text} *
+    input(type=type,id=id,name=id,placeholder=place)
+doctype
+html(lang='en')
+  head
+    include ./linksHeader.pug
+    link(rel="stylesheet", href="../CSS/member.css")
+    title Member Dashboard
+  body
+    include ./frame.pug
+    .main 
+      .topbar 
+        p Members
+        a(href="/PHP/logout.php")
+          button logout
+      .members
+        .search
+          i.icon-search 
+          input(type="text" placeholder="Search...")
+        .buttons
+          button 
+            i.icon-plus 
+            |New Member
+          br
+        .table
+          .tr
+            .th ID
+            .th Name
+            .th Gmail
+            .th Image
+            .th Subscibe Date
+            .th Admin
+            .th Action
+          .tr
+            .td 1
+            .td OOP
+            .td Mark
+            .td 
+              img(src="../image/img.jpeg", alt="")
+            .td Programming
+            .td Programming
+            .td 
+              i.icon-pencil-square
+              i.icon-trash
+      .addmember
+        form(action="/PHP/member/insert.php",method="post",enctype="multipart/form-data")
+          .form
+            .memberDetails 
+              h3 Member Details 
+              .input
+                label(for="photo")  Photo *
+                input(type="file",name="photo",id="photo",accept="image/*",onchange="loadFile(event)")
+                img(src="")
+              +inputMixin("text","name","Name","Name....")
+              +inputMixin("gmail","gmail","gmail","gmail...")
+              +inputMixin("password","password","password","password...")
+              +inputMixin("password","ConfirmPassword","Confirm password","Confirm password...")
+              .input
+                label(for="admin")  admin *
+                select(name="admin",id="admin")
+                    option(value="-") Select 
+                    option(value="0") No 
+                    option(value="1") Yes 
+              input(type="text", name="idMember",id="idMember", hidden)
+
+          .footer
+            div
+              button#save Submit
+            button Back
+    script(src="../JS/member.js") 

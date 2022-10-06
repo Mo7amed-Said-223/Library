@@ -1,0 +1,167 @@
+.card {
+  background-color: var(--colorWhite);
+  border-radius: 20px;
+  padding: 3%;
+  width: 100%;
+  margin: 1% 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: var(--colorBack);
+}
+
+::-moz-selection {
+  background-color: var(--color2);
+  color: var(--colorText);
+}
+
+::selection {
+  background-color: var(--color2);
+  color: var(--colorText);
+}
+
+/*Navigation*/
+nav {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  padding: 7px;
+  padding-right: 0;
+  background-color: var(--colorPurple);
+}
+
+nav p {
+  font-size: 32px;
+  color: var(--color1);
+  font-weight: bold;
+  margin: 20px 0 30px 0;
+}
+
+nav p span {
+  background-color: var(--colorOrange);
+  border-radius: 10px;
+  padding: 2px 2px 4px 8px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--color2);
+  font-size: 24px;
+  padding: 15px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  width: 100%;
+}
+
+nav a i {
+  margin: 0 10px;
+  text-align: center;
+  display: inline-block;
+  width: 20px;
+}
+
+nav a span {
+  position: absolute;
+  vertical-align: top;
+  text-align: start;
+  padding: 0 7px;
+}
+
+nav a:hover {
+  background-color: var(--colorBack);
+  color: var(--colorPurple);
+}
+
+nav a:hover::before, nav a:hover::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: transparent;
+  right: 0;
+  border-radius: 50%;
+}
+
+nav a:hover::before {
+  top: -50px;
+  -webkit-box-shadow: 35px 35px 0 10px var(--colorBack);
+          box-shadow: 35px 35px 0 10px var(--colorBack);
+}
+
+nav a:hover::after {
+  bottom: -50px;
+  -webkit-box-shadow: 35px -35px 0 10px var(--colorBack);
+          box-shadow: 35px -35px 0 10px var(--colorBack);
+}
+
+/*Main*/
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  padding: 10px 15px;
+}
+
+.main .topbar {
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 20px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .topbar * {
+  vertical-align: middle;
+}
+
+.main .topbar p {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--colorText);
+}
+
+.main .topbar a button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color4);
+  color: var(--colorText);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.main .topbar a button:hover {
+  background-color: var(--colorPurple);
+  color: var(--colorWhite);
+}
+
+.main .topbar a button {
+  width: 200px;
+}
+/*# sourceMappingURL=frame.css.map */

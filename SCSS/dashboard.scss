@@ -1,0 +1,164 @@
+@import "./include";
+
+
+@include active(1);
+
+.header {
+  @extend .card;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  height: fit-content;
+
+  div {
+    display: inline-block;
+    width: 25%;
+
+    i {
+      display: inline-flex;
+      color: var(--colorWhite);
+      font-size: 2.5rem;
+      width: 75px;
+      height: 75px;
+      padding: 10px;
+      border-radius: 50%;
+
+      &::before {
+        margin: auto;
+      }
+    }
+
+    .data {
+      width: 50%;
+      text-align: left;
+      margin-left: 20px;
+
+      .name {
+        color: var(--color3);
+        font-size: 25px;
+        display: block;
+      }
+
+      .number {
+        color: var(--colorText);
+        font-weight: bolder;
+        font-size: 25px;
+      }
+    }
+  }
+}
+.body{
+  width: 100%;
+}
+.book {
+  @extend .card;
+  width: 50%;
+  margin-right: 5%;
+  vertical-align: top;
+  display: inline-block;
+  h3 {
+    color: var(--colorText);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .b {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    img {
+      width:100px;
+      height: 80px;
+      border-radius: 20px;
+      margin-right:  20px;
+    }
+
+    h4 {
+      color: var(--colorText);
+      font-size: 21px;
+      margin: 5px 0;
+    }
+
+    p {
+      color: var(--color3);
+      font-size: 18px;
+    }
+  }
+
+}
+
+.j {
+  color: #000;
+}
+.admins {
+  @extend .card;
+  width: 45%;
+  vertical-align: top;
+  display: inline-block;
+  .add {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    flex-direction: column;
+      h3 {
+        color: var(--colorText);
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      p {
+        color: var(--color3);
+        font-size: 16px;
+        margin: 5px 0;
+
+        span {
+          font-weight: bold;
+          color: var(--colorText);
+        }
+      }
+    }
+    width: 40%;
+    .admin {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 10px 0;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+
+          h4 {
+            color: var(--colorText);
+            font-size: 18px;
+            margin-left: 20px;
+          }
+
+      
+
+      i {
+        display: inline-flex;
+        border: 2px solid var(--color3);
+        color: var(--color3);
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        &::before {
+          margin: auto;
+          font-weight: bolder;
+        }
+
+        &:hover {
+          background-color: var(--colorPurple);
+          color: var(--colorWhite);
+          border-color: var(--colorPurple);
+        }
+      }
+    }
+  
+
+}

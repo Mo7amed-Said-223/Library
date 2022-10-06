@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/frame.css">
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link class="theme-file" rel="stylesheet" href="../CSS/colorLight.css">
+    <link rel="stylesheet" href="../icon/style.css">
+    <link rel="stylesheet" href="../CSS/categories.css">
+    <title>Category Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <p> <span class="icon-books"></span><b>Library</b></p>
+        <ul>
+            <li><a href="./dashboard.html"><i class="icon-home"></i><span>Dashboard</span></a></li>
+            <li><a href="./book.html"><i class="icon-book"></i><span>Books</span></a></li>
+            <li><a href="./categorie.html"><i class="icon-list"></i><span>Categories</span></a></li>
+            <li><a href="./member.html"><i class="icon-group"></i><span>Members</span></a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="topbar">
+            <p>Categories</p><a href="/PHP/logout.php"><button>logout</button></a>
+        </div>
+        <div class="Categories">
+            <div class="buttons"><button> <i class="icon-plus"> </i>New Categorie</button><br></div>
+            <div class="table">
+                <div class="tr">
+                    <div class="th">ID</div>
+                    <div class="th">Title</div>
+                    <div class="th">Total books</div>
+                    <div class="th">Action</div>
+                </div>
+                <div class="tr">
+                    <div class="td">1</div>
+                    <div class="td">OOP</div>
+                    <div class="td">Mark</div>
+                    <div class="td"> <i class="icon-pencil-square"></i><i class="icon-trash"></i></div>
+                </div>
+            </div>
+            <div class="newCategorie">
+                <p>❌</p>
+                <div class="input"><input type="text" placeholder="Name Of Categorie...."></div>
+                <div class="buttons"><button> <i class="icon-plus"> </i>Create</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/categorie.js"> </script>
+</body>
+
+</html>

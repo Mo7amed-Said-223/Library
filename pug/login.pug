@@ -1,0 +1,33 @@
+mixin inputMixin(type,id,text,place)
+  .input
+    label(for=id) #{text}
+    input(type=type,id=id,name=id,placeholder=place)
+doctype html
+html(lang="en")
+    head
+      include ./linksHeader.pug
+      link(rel="stylesheet", href="../CSS/login.css")
+      title login
+    body 
+      .card
+          h1 
+              i.icon-books
+              | Library
+          form(action="/PHP/login/select.php", method="post" , class="login")
+              +inputMixin("email","gmail","Email","Enter Your Email...")
+              +inputMixin("password","password","Password","Enter Your Password")
+              .input
+                input(type="submit", value="Login")
+              h3 Not a member yet?
+                span sign-in
+          form(action="/PHP/login/insert.php", method="post",,enctype="multipart/form-data",class="signin") 
+              +inputMixin("text","userName","User Name","Enter Your Name...")
+              +inputMixin("email","gmail","Email","Enter Your Email...")
+              +inputMixin("password","password","Password","Enter Your Password")
+              +inputMixin("password","passwordConfirm","Password Confirm","Enter Your Password")
+              +inputMixin("file","photo","Image")
+              .input
+                input(type="submit", value="Create Account")
+              h3 Already Registered.
+                span Login
+      script(src="../JS/log_sign.js") 
