@@ -7,5 +7,5 @@ $data = json_decode($data);
 
 
 
-$addData = $database->prepare("DELETE FROM `member` WHERE `member`.`id` = {$data->id}");
+$addData = $database->prepare("DELETE FROM `member` WHERE `member`.`id` = {$data->id} AND `member`.`id` != 1");
 $addData->execute();
